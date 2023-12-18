@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 300px;
+            margin:auto;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            height:600px;
+        }
+        .container > h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+        .imgcontainer {
+            display:flex;
+            flex-direction: column;
+            border:1px groove gray;
+            border-radius: 3px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 400px;
+        }
+        .image {
+            width: 100%;
+            height: 70%;
+
+        }
+        .name {
+            font-size: 18px;
+            margin-top:20px;
+            padding: 10px;
+        }
+        .position {
+            font-size: 15px;
+            padding:10px;
+        }
+        .buttons {
+            margin-top:20px;
+            display:flex;
+            justify-content: space-evenly;
+        }
+        .butn {
+            background-color: rgb(29, 105, 219);
+            color:white;
+            padding:10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: none;
+            transition: background-color 0.5s;
+        }
+        .butn:hover {
+            background-color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Click to show Data</h1>
+        <div class="imgcontainer">
+            <img class="image" id="image" src="anonymous-user.png" alt="">
+            <span class="name" id="namepic">Name: Click to change</span>
+            <span class="position" id="pos">Position: Click to change</span>
+        </div>
+        <div class="buttons">
+            <button class="butn" onclick="showmark()">Mark Zuckerberg</button>
+            <button class="butn" onclick="showsteve()">Steve Jobs</button>
+        </div>
+    </div>
+    
+
+</body>
+<script>
+    var img = document.getElementById("image");
+    var name = document.getElementById("namepic");
+    var pos = document.getElementById("pos");
+    function showmark() {
+        img.src = "markzuck.webp"
+        document.getElementById("namepic").innerHTML = "Name: Mark Zuckerberg"
+        pos.innerHTML = "Position: CEO of Meta"
+    }   
+    function showsteve() {
+        img.src = "stevejobs.jpg"
+        document.getElementById("namepic").innerHTML = "Name: Steve Jobs"
+        pos.innerHTML = "Position: CEO of Apple"
+    }
+</script>
+</html>
