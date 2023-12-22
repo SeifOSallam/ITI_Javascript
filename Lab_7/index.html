@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>COINS</h1>
+</body>
+<script>
+    function deductCoin() {
+        var coins = 5;
+        return function() {
+            return --coins;
+        };
+    }
+    const bag1 = deductCoin();
+    const bag2 = deductCoin();
+    const bag3 = deductCoin();
+    console.log("Bag 1 coins after deduction = " + bag1());
+    console.log("Bag 1 coins after deduction = " + bag1());
+    console.log("Bag 1 coins after deduction = " + bag1());
+    console.log("Bag 2 coins after deduction = " + bag2());
+    console.log("Bag 2 coins after deduction = " + bag2());
+    console.log("Bag 2 coins after deduction = " + bag2());
+    console.log("Bag 2 coins after deduction = " + bag2());
+</script>
+</html>
